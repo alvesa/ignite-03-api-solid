@@ -15,3 +15,10 @@
 - Creating docker image manually `docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRES_PASSWORD=<pass> -e POSTGRES_DATABASE=apisolid -p 5432:5432 bitnami/postgresql`
 
 - PG starting `docker compose up -d`
+
+## Get Started
+
+- `docker compose up -d`
+- *if db have not created yet* `npx prisma migrate dev`
+- `npm run start-dev`
+

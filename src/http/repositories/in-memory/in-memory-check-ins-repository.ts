@@ -20,6 +20,18 @@ export class CheckInsInMemoryRepository implements CheckInsRepository {
     return checkIn
   }
 
+  async save(checkIn: Checkin) {
+    const checkInIndex = this.checkIns.findIndex(
+      (item) => item.id === checkIn.id,
+    )
+
+    if (checkInIndex >= 0) {
+      this.checkIns[checkInIndex] = checkIn
+    }
+
+    return checkIn
+  }
+
   async findByUserIdOnDate(userId: string, date: Date) {
     const startOdTheDay = dayjs(date).startOf('date')
     const endOdTheDay = dayjs(date).endOf('date')
@@ -46,5 +58,15 @@ export class CheckInsInMemoryRepository implements CheckInsRepository {
 
   async countByUserId(userId: string) {
     return this.checkIns.filter((item) => item.user_id === userId).length
+  }
+
+  async findById(id: string) {
+    const checkIn = this.checkIns.find((item) => item.id === id)
+
+    if (!checkIn) {
+      return null
+    }
+
+    return checkIn
   }
 }

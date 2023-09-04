@@ -1,7 +1,5 @@
 import { expect, describe, it, beforeEach, vi, afterEach } from 'vitest'
 import { CheckInsInMemoryRepository } from '../repositories/in-memory/in-memory-check-ins-repository'
-import { CheckInUseCase } from './checkin'
-import { InMemoryGymsRepository } from '../repositories/in-memory/in-memory-gyms-repository'
 import { ValidateCheckInUseCase } from './validate-checkin'
 import { ResourceNotFoundError } from './errors/resource-not-found'
 import { LateCheckInValidateError } from './errors/late-checkin-validate-error'

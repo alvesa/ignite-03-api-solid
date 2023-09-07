@@ -22,3 +22,7 @@
 - *if db have not created yet* `npx prisma migrate dev`
 - `npm run start-dev`
 
+## Tests
+
+- `npm link` to create a link for package prisma test environment
+- `npm link prisma-test-environment` to link at main application

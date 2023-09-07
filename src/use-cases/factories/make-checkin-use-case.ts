@@ -1,5 +1,5 @@
-import { PrismaCheckinsRepository } from '@/http/repositories/prisma/prisma-checkins-repository'
-import { PrismaGymsRepository } from '@/http/repositories/prisma/prisma-gyms-repository'
+import { PrismaCheckinsRepository } from '@/repositories/prisma/prisma-checkins-repository'
+import { PrismaGymsRepository } from '@/repositories/prisma/prisma-gyms-repository'
 import { CheckInUseCase } from '../checkin'
 
 export function makeCheckinUseCase() {

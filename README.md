@@ -26,3 +26,7 @@
 
 - `npm link` to create a link for package prisma test environment
 - `npm link prisma-test-environment` to link at main application
+
+## Github Actions
+
+- 2 actions, testing unit tests and e2e tests
